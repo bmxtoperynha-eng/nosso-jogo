@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#25101f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Nosso Jogo">
+<link rel="manifest" href="manifest.json">
+<title>Nosso Jogo ❤️‍🔥</title>
+<style>
+:root{--bg:#170e18;--panel:#281827;--panel2:#342034;--pink:#ff5c91;--gold:#ffc76b;--text:#fff5f8;--muted:#cbb7c7;--line:#53364f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#44213b 0,#170e18 48%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
+header{padding:24px 18px 14px;text-align:center}header .logo{font-size:40px}h1{margin:4px 0;font-size:28px;letter-spacing:.3px}header p{margin:4px;color:var(--muted);font-size:14px}
+main{max-width:720px;margin:auto;padding:0 14px 40px}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0 16px}
+.tab{border:1px solid var(--line);background:#241523;color:var(--muted);padding:11px 4px;border-radius:13px;font-size:12px;font-weight:700}
+.tab.active{background:var(--pink);border-color:var(--pink);color:#2b1020}
+.panel{background:linear-gradient(145deg,#30202f,#241623);border:1px solid var(--line);border-radius:20px;padding:17px;margin-bottom:13px;box-shadow:0 12px 35px #0003}
+h2{font-size:19px;margin:0 0 12px}h3{margin:0 0 5px;font-size:17px}
+.muted{color:var(--muted);font-size:13px;line-height:1.45}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+input,textarea,select{width:100%;background:#190f1b;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;margin:5px 0 10px}
+textarea{min-height:75px;resize:vertical}label{font-size:13px;color:var(--muted);display:block}
+button{border:0;border-radius:13px;padding:12px 15px;background:var(--pink);color:#2b1020;font-weight:800;font-size:14px;cursor:pointer}
+button.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+button.gold{background:var(--gold);color:#35200a}.button-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.card{background:#1e1420;border:1px solid var(--line);border-radius:16px;padding:13px;margin:9px 0}
+.card-top{display:flex;gap:12px;align-items:center}.art{width:58px;height:58px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#67304e,#39203d);font-size:29px;flex-shrink:0}
+.card p{margin:4px 0;color:var(--muted);font-size:13px;line-height:1.4}.tag{display:inline-block;font-size:11px;color:var(--gold);border:1px solid #76552f;padding:3px 8px;border-radius:20px;margin-top:5px}
+.big-result{text-align:center;padding:22px 10px}.big-result .art{margin:0 auto 12px;width:86px;height:86px;font-size:42px}.big-result h2{font-size:24px}.big-result p{max-width:440px;margin:7px auto;color:var(--muted)}
+.hidden{display:none!important}.empty{text-align:center;color:var(--muted);padding:20px 8px}
+footer{text-align:center;color:#a991a4;font-size:11px;padding:12px}
+small{color:var(--muted)}
+@media(min-width:600px){.tabs{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="logo">💘🔥</div><h1>Nosso Jogo</h1><p>Brincadeira a dois. Sem pressão, só diversão.</p></header>
+<main>
+<nav class="tabs" aria-label="Navegação">
+<button class="tab active" data-tab="sortear">🎲 Sortear</button>
+<button class="tab" data-tab="cadastro">➕ Cadastro</button>
+<button class="tab" data-tab="favoritas">❤️ Favoritas</button>
+<button class="tab" data-tab="historico">🕘 Histórico</button>
+<button class="tab" data-tab="desafios">✨ Desafios</button>
+</nav>
+
+<section id="sortear" class="view">
+<div class="panel">
+<h2>Qual vai ser a brincadeira?</h2>
+<p class="muted">Toquem em sortear e descubram uma ideia. Vocês podem aceitar, sortear outra ou simplesmente pular.</p>
+<label for="filter">Categoria</label>
+<select id="filter"><option value="Todas">Todas</option><option>Leve</option><option>Intermediária</option><option>Ousada</option></select>
+<button class="gold" id="draw" style="width:100%;padding:15px;font-size:16px">🎲 Sortear agora</button>
+<div id="result" class="empty">Seu próximo momento divertido começa aqui ❤️</div>
+</div>
+<div class="panel"><h2>Um combinado importante</h2><p class="muted">O sorteio é apenas uma sugestão. Cada pessoa pode dizer “sim”, “não” ou “vamos trocar” a qualquer momento. Nada é obrigatório.</p></div>
+</section>
+
+<section id="cadastro" class="view hidden">
+<div class="panel">
+<h2>Adicionar uma ideia</h2>
+<form id="ideaForm">
+<label for="name">Nome da posição ou ideia</label><input id="name" maxlength="55" required placeholder="Ex.: abraço demorado">
+<label for="desc">Descrição (opcional)</label><textarea id="desc" maxlength="220" placeholder="Uma descrição curta para vocês lembrarem..."></textarea>
+<label for="category">Categoria</label><select id="category"><option>Leve</option><option>Intermediária</option><option>Ousada</option></select>
+<button type="submit">Salvar ideia</button>
+</form>
+</div>
+<div class="panel"><h2>Ideias cadastradas</h2><div id="allIdeas"></div></div>
+</section>
+
+<section id="favoritas" class="view hidden"><div class="panel"><h2>❤️ Favoritas do casal</h2><div id="favoriteIdeas"></div></div></section>
+<section id="historico" class="view hidden"><div class="panel"><h2>🕘 Últimos sorteios</h2><div id="history"></div><button class="secondary" id="clearHistory">Limpar histórico</button></div></section>
+<section id="desafios" class="view hidden">
+<div class="panel"><h2>✨ Desafios para o casal</h2><p class="muted">Pequenas missões carinhosas e divertidas. Escolham juntos o que combina com o momento.</p><div id="challenge"></div><button class="gold" id="newChallenge">Sortear desafio</button></div>
+</section>
+<footer>Feito para duas pessoas adultas, com respeito, carinho e consentimento. Seus dados ficam salvos neste aparelho.</footer>
+</main>
+<script>
+const starter=[
+ {id:1,name:"Beijo de 30 segundos",desc:"Parem um instante e aproveitem um beijo sem pressa.",category:"Leve",emoji:"💋",favorite:false},
+ {id:2,name:"Massagem relaxante",desc:"Cada um oferece alguns minutos de massagem nos ombros ou nas mãos.",category:"Leve",emoji:"🫶",favorite:false},
+ {id:3,name:"Dança juntinhos",desc:"Escolham uma música e dancem bem próximos.",category:"Leve",emoji:"💃",favorite:false},
+ {id:4,name:"Escolha surpresa",desc:"Uma pessoa escolhe uma música, a outra escolhe o clima do encontro.",category:"Intermediária",emoji:"🎁",favorite:false},
+ {id:5,name:"Encontro sem celular",desc:"Deixem os celulares de lado e dediquem um tempo só um ao outro.",category:"Intermediária",emoji:"🕯️",favorite:false},
+ {id:6,name:"Conversa de desejos",desc:"Compartilhem, sem julgamentos, algo que gostariam de experimentar. Só vale se os dois quiserem.",category:"Ousada",emoji:"💬",favorite:false}
+];
+const challenges=[
+"Cada um diga três coisas que admira no outro.",
+"Escolham juntos uma música que lembre o começo da relação.",
+"Preparem uma bebida ou lanche para curtirem juntinhos.",
+"Façam uma rodada de elogios: um elogio sincero por vez.",
+"Planejem um encontro surpresa em casa, com o que já têm.",
+"Deem um beijo demorado e depois perguntem: 'o que você gostaria agora?'"
+];
+let ideas=JSON.parse(localStorage.getItem("nj_ideas")||"null")||starter;
+let history=JSON.parse(localStorage.getItem("nj_history")||"[]");
+let current=null;
+const save=()=>{localStorage.setItem("nj_ideas",JSON.stringify(ideas));localStorage.setItem("nj_history",JSON.stringify(history));};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function card(item,withActions=true){return `<div class="card"><div class="card-top"><div class="art">${item.emoji||"💘"}</div><div style="flex:1"><h3>${esc(item.name)}</h3><span class="tag">${esc(item.category)}</span></div></div><p>${esc(item.desc||"Sem descrição.")}</p>${withActions?`<div class="button-row"><button class="secondary" onclick="toggleFav(${item.id})">${item.favorite?"💔 Tirar favorita":"❤️ Favoritar"}</button><button class="secondary" onclick="removeIdea(${item.id})">Excluir</button></div>`:""}</div>`}
+function render(){document.getElementById("allIdeas").innerHTML=ideas.length?ideas.map(x=>card(x)).join(""):'<div class="empty">Ainda não há ideias cadastradas.</div>';let fav=ideas.filter(x=>x.favorite);document.getElementById("favoriteIdeas").innerHTML=fav.length?fav.map(x=>card(x,false)).join(""):'<div class="empty">Suas favoritas aparecerão aqui.</div>';document.getElementById("history").innerHTML=history.length?history.slice().reverse().map(x=>`<div class="card"><b>${esc(x.name)}</b><p>${new Date(x.date).toLocaleString("pt-BR")}</p></div>`).join(""):'<div class="empty">Nenhum sorteio realizado ainda.</div>';}
+function toggleFav(id){let x=ideas.find(i=>i.id===id);if(x){x.favorite=!x.favorite;save();render();}}
+function removeIdea(id){if(confirm("Excluir esta ideia?")){ideas=ideas.filter(i=>i.id!==id);save();render();}}
+document.getElementById("ideaForm").addEventListener("submit",e=>{e.preventDefault();ideas.push({id:Date.now(),name:document.getElementById("name").value.trim(),desc:document.getElementById("desc").value.trim(),category:document.getElementById("category").value,emoji:"💘",favorite:false});save();e.target.reset();render();alert("Ideia salva!");});
+document.getElementById("draw").addEventListener("click",()=>{let cat=document.getElementById("filter").value;let pool=ideas.filter(x=>cat==="Todas"||x.category===cat);if(!pool.length){document.getElementById("result").innerHTML='<div class="empty">Não há ideias nesta categoria. Cadastre uma ou escolha outra categoria.</div>';return;}current=pool[Math.floor(Math.random()*pool.length)];history.push({name:current.name,date:new Date().toISOString()});history=history.slice(-30);save();document.getElementById("result").innerHTML=`<div class="big-result"><div class="art">${current.emoji||"💘"}</div><h2>${esc(current.name)}</h2><span class="tag">${esc(current.category)}</span><p>${esc(current.desc||"")}</p><div class="button-row" style="justify-content:center"><button onclick="acceptIdea()">❤️ Topamos!</button><button class="secondary" onclick="document.getElementById('draw').click()">🔄 Outra</button><button class="secondary" onclick="skipIdea()">Pular</button></div></div>`;render();});
+function acceptIdea(){document.getElementById("result").innerHTML='<div class="empty">Combinado! Aproveitem o momento ❤️</div>';}
+function skipIdea(){document.getElementById("result").innerHTML='<div class="empty">Tudo bem! O importante é os dois estarem à vontade. Podem sortear outra opção.</div>';}
+document.getElementById("newChallenge").addEventListener("click",()=>{let c=challenges[Math.floor(Math.random()*challenges.length)];document.getElementById("challenge").innerHTML=`<div class="big-result"><div class="art">✨</div><h2>${esc(c)}</h2></div>`;});
+document.getElementById("clearHistory").addEventListener("click",()=>{if(confirm("Apagar todo o histórico?")){history=[];save();render();}});
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".view").forEach(x=>x.classList.add("hidden"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.remove("hidden");}));
+render();
+if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script>
+</body></html>

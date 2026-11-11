@@ -1,0 +1,9 @@
+{
+  "name": "Nosso Jogo",
+  "short_name": "Nosso Jogo",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#170e18",
+  "theme_color": "#25101f",
+  "description": "Um jogo divertido e carinhoso para o casal."
+}
