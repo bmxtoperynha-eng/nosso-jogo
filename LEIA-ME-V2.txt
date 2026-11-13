@@ -1,0 +1,22 @@
+NOSSO JOGO 2.0 — ATUALIZAÇÃO
+
+Novidades:
+- Roleta animada com resultado sorteado.
+- Sorteio filtrado por categoria.
+- Opção de sortear somente favoritas.
+- Mais ideias iniciais com ilustrações simbólicas (emojis).
+- Cadastro com escolha de ilustração.
+- Favoritas, histórico e desafios preservados.
+- Atualização do cache para a versão 2.0.
+
+ATUALIZAR NO GITHUB:
+1. Extraia o ZIP no Windows.
+2. Abra o repositório GitHub do Nosso Jogo.
+3. Use Add file > Upload files.
+4. Envie e substitua index.html, manifest.json e sw.js pelos arquivos desta versão.
+5. Clique em Commit changes.
+6. Aguarde alguns minutos.
+7. No iPhone, feche o Nosso Jogo e abra novamente pelo ícone. Se não atualizar, abra o endereço no Safari e recarregue a página.
+
+DADOS:
+A atualização mantém os dados locais existentes da versão 1, usando as mesmas chaves de armazenamento (nj_ideas e nj_history). Mesmo assim, recomenda-se não limpar os dados do Safari durante a atualização. Os dados ficam neste navegador/aparelho e não sincronizam com outro dispositivo.

@@ -1,116 +1,75 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#25101f">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Nosso Jogo">
-<link rel="manifest" href="manifest.json">
-<title>Nosso Jogo ❤️‍🔥</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#210d25"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Nosso Jogo">
+<link rel="manifest" href="manifest.json"><title>Nosso Jogo 2.0 ❤️‍🔥</title>
 <style>
-:root{--bg:#170e18;--panel:#281827;--panel2:#342034;--pink:#ff5c91;--gold:#ffc76b;--text:#fff5f8;--muted:#cbb7c7;--line:#53364f}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#44213b 0,#170e18 48%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
-header{padding:24px 18px 14px;text-align:center}header .logo{font-size:40px}h1{margin:4px 0;font-size:28px;letter-spacing:.3px}header p{margin:4px;color:var(--muted);font-size:14px}
-main{max-width:720px;margin:auto;padding:0 14px 40px}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0 16px}
-.tab{border:1px solid var(--line);background:#241523;color:var(--muted);padding:11px 4px;border-radius:13px;font-size:12px;font-weight:700}
-.tab.active{background:var(--pink);border-color:var(--pink);color:#2b1020}
-.panel{background:linear-gradient(145deg,#30202f,#241623);border:1px solid var(--line);border-radius:20px;padding:17px;margin-bottom:13px;box-shadow:0 12px 35px #0003}
-h2{font-size:19px;margin:0 0 12px}h3{margin:0 0 5px;font-size:17px}
-.muted{color:var(--muted);font-size:13px;line-height:1.45}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
-input,textarea,select{width:100%;background:#190f1b;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;margin:5px 0 10px}
-textarea{min-height:75px;resize:vertical}label{font-size:13px;color:var(--muted);display:block}
-button{border:0;border-radius:13px;padding:12px 15px;background:var(--pink);color:#2b1020;font-weight:800;font-size:14px;cursor:pointer}
-button.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
-button.gold{background:var(--gold);color:#35200a}.button-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
-.card{background:#1e1420;border:1px solid var(--line);border-radius:16px;padding:13px;margin:9px 0}
-.card-top{display:flex;gap:12px;align-items:center}.art{width:58px;height:58px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#67304e,#39203d);font-size:29px;flex-shrink:0}
-.card p{margin:4px 0;color:var(--muted);font-size:13px;line-height:1.4}.tag{display:inline-block;font-size:11px;color:var(--gold);border:1px solid #76552f;padding:3px 8px;border-radius:20px;margin-top:5px}
-.big-result{text-align:center;padding:22px 10px}.big-result .art{margin:0 auto 12px;width:86px;height:86px;font-size:42px}.big-result h2{font-size:24px}.big-result p{max-width:440px;margin:7px auto;color:var(--muted)}
-.hidden{display:none!important}.empty{text-align:center;color:var(--muted);padding:20px 8px}
-footer{text-align:center;color:#a991a4;font-size:11px;padding:12px}
-small{color:var(--muted)}
-@media(min-width:600px){.tabs{grid-template-columns:repeat(5,1fr)}}
-</style>
-</head>
-<body>
-<header><div class="logo">💘🔥</div><h1>Nosso Jogo</h1><p>Brincadeira a dois. Sem pressão, só diversão.</p></header>
+:root{--bg:#160b1b;--panel:#28152d;--panel2:#351b3b;--pink:#ff4f9a;--pink2:#ff86ba;--gold:#ffc76b;--text:#fff5fb;--muted:#d2b9d0;--line:#694064;--blue:#57bde9}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at 50% -10%,#62245b 0,#2a1530 34%,var(--bg) 75%)}
+header{max-width:900px;margin:auto;padding:22px 16px 10px;text-align:center}header .heart{font-size:30px}h1{font-size:clamp(27px,6vw,39px);margin:2px 0;background:linear-gradient(90deg,#fff,#ff75b2);color:transparent;background-clip:text}header p{margin:0;color:var(--muted);font-size:14px}
+main{max-width:900px;margin:auto;padding:10px 14px 40px}.tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:14px 0}.tab{border:1px solid var(--line);background:#28172d;color:var(--muted);padding:10px 4px;border-radius:14px;font-size:12px;font-weight:750}.tab.active{background:linear-gradient(135deg,var(--pink),#d72d83);color:#2b1025;border-color:#ff9bc4}
+.panel{background:linear-gradient(145deg,#38203d,#241429);border:1px solid var(--line);border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 12px 32px #0004}h2{font-size:19px;margin:0 0 9px}h3{font-size:16px;margin:0 0 4px}.muted{color:var(--muted);font-size:13px;line-height:1.5}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+label{display:block;color:var(--muted);font-size:13px;margin:8px 0 4px}input,textarea,select{width:100%;background:#190e20;color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;margin:4px 0 9px}textarea{min-height:76px;resize:vertical}button{border:0;border-radius:13px;padding:12px 15px;background:linear-gradient(135deg,var(--pink),#ed3989);color:#2b1025;font-weight:800;font-size:14px;cursor:pointer}button.secondary{background:#3a2340;color:var(--text);border:1px solid var(--line)}button.gold{background:linear-gradient(135deg,#ffe58b,#ffbd4c);color:#3a2410}.button-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.hidden{display:none!important}.empty{text-align:center;color:var(--muted);padding:18px 8px}
+.wheel-wrap{display:grid;grid-template-columns:1fr;justify-items:center;gap:14px;padding:10px 0}.wheel-shell{width:min(82vw,340px);aspect-ratio:1;position:relative;display:grid;place-items:center}.wheel{width:100%;height:100%;border-radius:50%;border:9px solid #f9b94f;box-shadow:0 0 0 4px #7d3c39,0 0 25px #ff7b31aa,inset 0 0 12px #fff8;position:relative;overflow:hidden;background:conic-gradient(#f33c91 0 45deg,#ffb52e 45deg 90deg,#8c49c9 90deg 135deg,#29a9d5 135deg 180deg,#8bc34a 180deg 225deg,#ff8b30 225deg 270deg,#367ad5 270deg 315deg,#b34bc4 315deg 360deg);transition:transform 4.2s cubic-bezier(.12,.72,.08,1)}
+.wheel:after{content:"";position:absolute;inset:10%;border-radius:50%;border:2px solid #ffffff88;box-shadow:inset 0 0 24px #fff5}.wheel-label{position:absolute;width:32%;height:32%;left:34%;top:34%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;color:white;font-size:clamp(10px,2.6vw,14px);font-weight:800;text-shadow:0 2px 4px #321;z-index:1}.wheel-label:nth-child(1){transform:translateY(-108px)}.wheel-label:nth-child(2){transform:translate(76px,-76px)}.wheel-label:nth-child(3){transform:translate(108px,0)}.wheel-label:nth-child(4){transform:translate(76px,76px)}.wheel-label:nth-child(5){transform:translateY(108px)}.wheel-label:nth-child(6){transform:translate(-76px,76px)}.wheel-label:nth-child(7){transform:translate(-108px,0)}.wheel-label:nth-child(8){transform:translate(-76px,-76px)}
+.pointer{position:absolute;top:-10px;z-index:3;font-size:35px;color:#fff;text-shadow:0 2px 8px #ff3f8e}.wheel-center{position:absolute;z-index:4;width:29%;height:29%;border-radius:50%;background:radial-gradient(circle at 35% 25%,#ff9ac6,#ed1674 65%,#8e164f);border:5px solid #ffd16b;box-shadow:0 0 0 4px #873b36,0 0 22px #ff5b9e;display:grid;place-items:center;color:white;font-weight:900;font-size:clamp(14px,4vw,20px);text-shadow:0 2px 4px #7d1647}
+.result{background:#1c1022;border:1px solid #82476e;border-radius:17px;padding:14px;text-align:center;width:100%;max-width:500px}.art{width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#77345f,#342047);display:grid;place-items:center;font-size:32px;flex-shrink:0;border:1px solid #a15a8c}.idea{background:#1d1223;border:1px solid #593454;border-radius:16px;padding:12px;margin:9px 0}.idea-head{display:flex;gap:11px;align-items:center}.idea p{color:var(--muted);font-size:13px;margin:7px 0 0;line-height:1.4}.tag{display:inline-block;font-size:11px;color:var(--gold);border:1px solid #89613d;padding:3px 8px;border-radius:20px;margin-top:5px}.fav-toggle{display:flex;align-items:center;gap:9px;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:#1d1223;margin:10px 0}.fav-toggle input{width:19px;height:19px;margin:0;accent-color:var(--pink)}.challenge-box{text-align:center;padding:20px 10px}.challenge-box .art{margin:0 auto 10px;width:80px;height:80px;font-size:40px}
+footer{text-align:center;color:#a98aa6;font-size:11px;padding:12px}.tab:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media(min-width:680px){.wheel-wrap{grid-template-columns:1fr 1fr}.wheel-shell{width:min(37vw,340px)}}
+</style></head><body>
+<header><div class="heart">💘 ✨ 💘</div><h1>Nosso Jogo <small style="font-size:14px;color:#ff9bc4">2.0</small></h1><p>Brincadeira a dois. Sem pressão, só diversão!</p></header>
 <main>
-<nav class="tabs" aria-label="Navegação">
-<button class="tab active" data-tab="sortear">🎲 Sortear</button>
-<button class="tab" data-tab="cadastro">➕ Cadastro</button>
-<button class="tab" data-tab="favoritas">❤️ Favoritas</button>
-<button class="tab" data-tab="historico">🕘 Histórico</button>
-<button class="tab" data-tab="desafios">✨ Desafios</button>
-</nav>
-
+<nav class="tabs"><button class="tab active" data-tab="sortear">🎲 Sorteio</button><button class="tab" data-tab="cadastro">➕ Cadastro</button><button class="tab" data-tab="favoritas">❤️ Favoritas</button><button class="tab" data-tab="historico">🕘 Histórico</button><button class="tab" data-tab="desafios">✨ Desafios</button></nav>
 <section id="sortear" class="view">
-<div class="panel">
-<h2>Qual vai ser a brincadeira?</h2>
-<p class="muted">Toquem em sortear e descubram uma ideia. Vocês podem aceitar, sortear outra ou simplesmente pular.</p>
-<label for="filter">Categoria</label>
-<select id="filter"><option value="Todas">Todas</option><option>Leve</option><option>Intermediária</option><option>Ousada</option></select>
-<button class="gold" id="draw" style="width:100%;padding:15px;font-size:16px">🎲 Sortear agora</button>
-<div id="result" class="empty">Seu próximo momento divertido começa aqui ❤️</div>
-</div>
-<div class="panel"><h2>Um combinado importante</h2><p class="muted">O sorteio é apenas uma sugestão. Cada pessoa pode dizer “sim”, “não” ou “vamos trocar” a qualquer momento. Nada é obrigatório.</p></div>
+<div class="panel"><h2>🎡 Roleta do casal</h2><p class="muted">Girem a roleta e descubram uma ideia para curtir juntos. O resultado é sempre um convite, nunca uma obrigação.</p>
+<label for="filter">Categoria</label><select id="filter"><option value="Todas">Todas as categorias</option><option>Leve</option><option>Intermediária</option><option>Ousada</option></select>
+<label class="fav-toggle"><input type="checkbox" id="onlyFav"> ⭐ Sortear somente as favoritas</label>
+<div class="wheel-wrap"><div class="wheel-shell"><div class="pointer">▼</div><div class="wheel" id="wheel"></div><div class="wheel-center" id="spinBtn" role="button" tabindex="0" aria-label="Girar roleta">GIRAR</div></div><div class="result" id="result"><div class="art" style="margin:0 auto 10px">💞</div><h3>Seu próximo momento começa aqui</h3><p class="muted">Toque em GIRAR para sortear uma ideia.</p></div></div>
+<div class="button-row" style="justify-content:center"><button class="gold" id="drawBtn">🎲 Sortear sem roleta</button></div></div>
+<div class="panel"><h2>🤝 Combinado importante</h2><p class="muted">O sorteio é só uma sugestão. Os dois podem aceitar, trocar ou pular a qualquer momento. Respeitem os limites e conversem antes de experimentar algo novo.</p></div>
 </section>
-
-<section id="cadastro" class="view hidden">
-<div class="panel">
-<h2>Adicionar uma ideia</h2>
-<form id="ideaForm">
-<label for="name">Nome da posição ou ideia</label><input id="name" maxlength="55" required placeholder="Ex.: abraço demorado">
-<label for="desc">Descrição (opcional)</label><textarea id="desc" maxlength="220" placeholder="Uma descrição curta para vocês lembrarem..."></textarea>
-<label for="category">Categoria</label><select id="category"><option>Leve</option><option>Intermediária</option><option>Ousada</option></select>
-<button type="submit">Salvar ideia</button>
-</form>
-</div>
-<div class="panel"><h2>Ideias cadastradas</h2><div id="allIdeas"></div></div>
-</section>
-
-<section id="favoritas" class="view hidden"><div class="panel"><h2>❤️ Favoritas do casal</h2><div id="favoriteIdeas"></div></div></section>
+<section id="cadastro" class="view hidden"><div class="panel"><h2>➕ Cadastrar uma ideia</h2><form id="ideaForm"><label for="name">Nome</label><input id="name" maxlength="55" required placeholder="Ex.: beijo demorado"><label for="desc">Descrição</label><textarea id="desc" maxlength="220" placeholder="Uma descrição curta..."></textarea><label for="category">Categoria</label><select id="category"><option>Leve</option><option>Intermediária</option><option>Ousada</option></select><label for="emoji">Ilustração</label><select id="emoji"><option>💋</option><option>💑</option><option>🕯️</option><option>🎁</option><option>💆</option><option>🥂</option><option>💌</option><option>✨</option><option>🌹</option><option>🎶</option><option>💞</option></select><button type="submit">Salvar ideia</button></form></div><div class="panel"><h2>Ideias cadastradas</h2><div id="allIdeas"></div></div></section>
+<section id="favoritas" class="view hidden"><div class="panel"><h2>❤️ Favoritas do casal</h2><p class="muted">Marquem as ideias preferidas para fazer um sorteio só delas.</p><div id="favoriteIdeas"></div></div></section>
 <section id="historico" class="view hidden"><div class="panel"><h2>🕘 Últimos sorteios</h2><div id="history"></div><button class="secondary" id="clearHistory">Limpar histórico</button></div></section>
-<section id="desafios" class="view hidden">
-<div class="panel"><h2>✨ Desafios para o casal</h2><p class="muted">Pequenas missões carinhosas e divertidas. Escolham juntos o que combina com o momento.</p><div id="challenge"></div><button class="gold" id="newChallenge">Sortear desafio</button></div>
-</section>
-<footer>Feito para duas pessoas adultas, com respeito, carinho e consentimento. Seus dados ficam salvos neste aparelho.</footer>
+<section id="desafios" class="view hidden"><div class="panel"><h2>✨ Desafios para o casal</h2><p class="muted">Pequenas missões carinhosas para sair da rotina.</p><div id="challenge" class="challenge-box"><div class="art">🎁</div><h3>Um desafio surpresa espera por vocês!</h3></div><div class="button-row" style="justify-content:center"><button class="gold" id="newChallenge">Sortear desafio</button></div></div></section>
+<footer>Feito para duas pessoas adultas, com respeito, carinho e consentimento. Seus dados ficam salvos neste aparelho e navegador.</footer>
 </main>
 <script>
 const starter=[
- {id:1,name:"Beijo de 30 segundos",desc:"Parem um instante e aproveitem um beijo sem pressa.",category:"Leve",emoji:"💋",favorite:false},
- {id:2,name:"Massagem relaxante",desc:"Cada um oferece alguns minutos de massagem nos ombros ou nas mãos.",category:"Leve",emoji:"🫶",favorite:false},
- {id:3,name:"Dança juntinhos",desc:"Escolham uma música e dancem bem próximos.",category:"Leve",emoji:"💃",favorite:false},
- {id:4,name:"Escolha surpresa",desc:"Uma pessoa escolhe uma música, a outra escolhe o clima do encontro.",category:"Intermediária",emoji:"🎁",favorite:false},
- {id:5,name:"Encontro sem celular",desc:"Deixem os celulares de lado e dediquem um tempo só um ao outro.",category:"Intermediária",emoji:"🕯️",favorite:false},
- {id:6,name:"Conversa de desejos",desc:"Compartilhem, sem julgamentos, algo que gostariam de experimentar. Só vale se os dois quiserem.",category:"Ousada",emoji:"💬",favorite:false}
+{name:'Beijo de 30 segundos',desc:'Parem um instante e aproveitem um beijo sem pressa.',category:'Leve',emoji:'💋'},
+{name:'Massagem relaxante',desc:'Cada um oferece alguns minutos de massagem nos ombros ou nas mãos.',category:'Leve',emoji:'💆'},
+{name:'Dança juntinhos',desc:'Escolham uma música e dancem bem próximos.',category:'Leve',emoji:'🎶'},
+{name:'Abraço demorado',desc:'Um abraço longo, sem distrações, só para curtir a companhia.',category:'Leve',emoji:'💑'},
+{name:'Elogios surpresa',desc:'Cada um diz três coisas que admira no outro.',category:'Leve',emoji:'💌'},
+{name:'Encontro sem celular',desc:'Deixem os celulares de lado e dediquem um tempo só um ao outro.',category:'Intermediária',emoji:'🕯️'},
+{name:'Brinde a dois',desc:'Preparem uma bebida ou suco e façam um brinde ao relacionamento.',category:'Intermediária',emoji:'🥂'},
+{name:'Escolha uma música',desc:'Uma pessoa escolhe a música e a outra escolhe como aproveitar esse momento.',category:'Intermediária',emoji:'🎵'},
+{name:'Surpresa romântica',desc:'Preparem uma pequena surpresa carinhosa um para o outro.',category:'Intermediária',emoji:'🎁'},
+{name:'Conversa de desejos',desc:'Compartilhem, sem julgamentos, algo que gostariam de experimentar. Só vale se os dois quiserem.',category:'Ousada',emoji:'💬'},
+{name:'Noite especial',desc:'Criem juntos um clima especial e combinem o que os dois desejam fazer.',category:'Ousada',emoji:'🌹'},
+{name:'Massagem com carinho',desc:'Façam uma massagem relaxante e conversem sobre o que é confortável para cada um.',category:'Ousada',emoji:'✨'}
 ];
-const challenges=[
-"Cada um diga três coisas que admira no outro.",
-"Escolham juntos uma música que lembre o começo da relação.",
-"Preparem uma bebida ou lanche para curtirem juntinhos.",
-"Façam uma rodada de elogios: um elogio sincero por vez.",
-"Planejem um encontro surpresa em casa, com o que já têm.",
-"Deem um beijo demorado e depois perguntem: 'o que você gostaria agora?'"
-];
-let ideas=JSON.parse(localStorage.getItem("nj_ideas")||"null")||starter;
-let history=JSON.parse(localStorage.getItem("nj_history")||"[]");
-let current=null;
-const save=()=>{localStorage.setItem("nj_ideas",JSON.stringify(ideas));localStorage.setItem("nj_history",JSON.stringify(history));};
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-function card(item,withActions=true){return `<div class="card"><div class="card-top"><div class="art">${item.emoji||"💘"}</div><div style="flex:1"><h3>${esc(item.name)}</h3><span class="tag">${esc(item.category)}</span></div></div><p>${esc(item.desc||"Sem descrição.")}</p>${withActions?`<div class="button-row"><button class="secondary" onclick="toggleFav(${item.id})">${item.favorite?"💔 Tirar favorita":"❤️ Favoritar"}</button><button class="secondary" onclick="removeIdea(${item.id})">Excluir</button></div>`:""}</div>`}
-function render(){document.getElementById("allIdeas").innerHTML=ideas.length?ideas.map(x=>card(x)).join(""):'<div class="empty">Ainda não há ideias cadastradas.</div>';let fav=ideas.filter(x=>x.favorite);document.getElementById("favoriteIdeas").innerHTML=fav.length?fav.map(x=>card(x,false)).join(""):'<div class="empty">Suas favoritas aparecerão aqui.</div>';document.getElementById("history").innerHTML=history.length?history.slice().reverse().map(x=>`<div class="card"><b>${esc(x.name)}</b><p>${new Date(x.date).toLocaleString("pt-BR")}</p></div>`).join(""):'<div class="empty">Nenhum sorteio realizado ainda.</div>';}
-function toggleFav(id){let x=ideas.find(i=>i.id===id);if(x){x.favorite=!x.favorite;save();render();}}
-function removeIdea(id){if(confirm("Excluir esta ideia?")){ideas=ideas.filter(i=>i.id!==id);save();render();}}
-document.getElementById("ideaForm").addEventListener("submit",e=>{e.preventDefault();ideas.push({id:Date.now(),name:document.getElementById("name").value.trim(),desc:document.getElementById("desc").value.trim(),category:document.getElementById("category").value,emoji:"💘",favorite:false});save();e.target.reset();render();alert("Ideia salva!");});
-document.getElementById("draw").addEventListener("click",()=>{let cat=document.getElementById("filter").value;let pool=ideas.filter(x=>cat==="Todas"||x.category===cat);if(!pool.length){document.getElementById("result").innerHTML='<div class="empty">Não há ideias nesta categoria. Cadastre uma ou escolha outra categoria.</div>';return;}current=pool[Math.floor(Math.random()*pool.length)];history.push({name:current.name,date:new Date().toISOString()});history=history.slice(-30);save();document.getElementById("result").innerHTML=`<div class="big-result"><div class="art">${current.emoji||"💘"}</div><h2>${esc(current.name)}</h2><span class="tag">${esc(current.category)}</span><p>${esc(current.desc||"")}</p><div class="button-row" style="justify-content:center"><button onclick="acceptIdea()">❤️ Topamos!</button><button class="secondary" onclick="document.getElementById('draw').click()">🔄 Outra</button><button class="secondary" onclick="skipIdea()">Pular</button></div></div>`;render();});
-function acceptIdea(){document.getElementById("result").innerHTML='<div class="empty">Combinado! Aproveitem o momento ❤️</div>';}
-function skipIdea(){document.getElementById("result").innerHTML='<div class="empty">Tudo bem! O importante é os dois estarem à vontade. Podem sortear outra opção.</div>';}
-document.getElementById("newChallenge").addEventListener("click",()=>{let c=challenges[Math.floor(Math.random()*challenges.length)];document.getElementById("challenge").innerHTML=`<div class="big-result"><div class="art">✨</div><h2>${esc(c)}</h2></div>`;});
-document.getElementById("clearHistory").addEventListener("click",()=>{if(confirm("Apagar todo o histórico?")){history=[];save();render();}});
-document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".view").forEach(x=>x.classList.add("hidden"));b.classList.add("active");document.getElementById(b.dataset.tab).classList.remove("hidden");}));
-render();
-if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("./sw.js").catch(()=>{});
-</script>
-</body></html>
+const challenges=['Cada um diga três coisas que admira no outro.','Escolham juntos uma música que lembre o começo da relação.','Preparem uma bebida ou lanche para curtirem juntinhos.','Façam uma rodada de elogios: um elogio sincero por vez.','Planejem um encontro surpresa em casa, com o que já têm.','Deem um beijo demorado e depois perguntem: “o que você gostaria agora?”','Recriem um momento divertido do início do namoro.','Escrevam um bilhete carinhoso e troquem entre vocês.'];
+const load=(k,f)=>{try{return JSON.parse(localStorage.getItem(k))??f}catch{return f}};
+let ideas=load('nj_ideas',[]);if(!Array.isArray(ideas))ideas=[];
+// Atualização segura: preserva os cadastros da versão 1 e acrescenta novas sugestões sem duplicar nomes.
+let changed=false;starter.forEach(s=>{if(!ideas.some(x=>x.name?.toLowerCase()===s.name.toLowerCase())){ideas.push({...s,id:Date.now()+Math.random(),favorite:false});changed=true}});
+ideas=ideas.map(x=>({...x,emoji:x.emoji||'💘',favorite:!!x.favorite}));
+let history=load('nj_history',[]);if(!Array.isArray(history))history=[];
+const save=()=>{localStorage.setItem('nj_ideas',JSON.stringify(ideas));localStorage.setItem('nj_history',JSON.stringify(history));};if(changed)save();
+const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let selected=null,spinning=false,rotation=0;
+function itemCard(x){return `<div class="idea"><div class="idea-head"><div class="art">${esc(x.emoji)}</div><div style="flex:1"><h3>${esc(x.name)}</h3><span class="tag">${esc(x.category)}</span></div></div><p>${esc(x.desc||'Sem descrição.')}</p><div class="button-row"><button class="secondary" onclick="toggleFav('${String(x.id)}')">${x.favorite?'💔 Tirar favorita':'❤️ Favoritar'}</button><button class="secondary" onclick="removeIdea('${String(x.id)}')">Excluir</button></div></div>`}
+function render(){ $('allIdeas').innerHTML=ideas.length?ideas.map(itemCard).join(''):'<div class="empty">Nenhuma ideia cadastrada.</div>';let fav=ideas.filter(x=>x.favorite);$('favoriteIdeas').innerHTML=fav.length?fav.map(x=>itemCard(x)).join(''):'<div class="empty">Marquem uma ideia como favorita no cadastro.</div>'; $('history').innerHTML=history.length?history.slice().reverse().map(x=>`<div class="idea"><b>${esc(x.name)}</b><p>${new Date(x.date).toLocaleString('pt-BR')}</p></div>`).join(''):'<div class="empty">Nenhum sorteio realizado ainda.</div>';}
+window.toggleFav=id=>{let x=ideas.find(i=>String(i.id)===id);if(x){x.favorite=!x.favorite;save();render()}};window.removeIdea=id=>{if(confirm('Excluir esta ideia?')){ideas=ideas.filter(i=>String(i.id)!==id);save();render()}};
+function pool(){let a=ideas.filter(x=>$('filter').value==='Todas'||x.category===$('filter').value);if($('onlyFav').checked)a=a.filter(x=>x.favorite);return a}
+function showResult(x){selected=x;$('result').innerHTML=`<div class="art" style="margin:0 auto 10px;width:78px;height:78px;font-size:40px">${esc(x.emoji)}</div><h2>${esc(x.name)}</h2><span class="tag">${esc(x.category)}</span><p class="muted">${esc(x.desc||'')}</p><div class="button-row" style="justify-content:center"><button onclick="acceptIdea()">❤️ Topamos!</button><button class="secondary" onclick="draw(false)">🔄 Outra</button><button class="secondary" onclick="skipIdea()">Pular</button></div>`;history.push({name:x.name,date:new Date().toISOString()});history=history.slice(-40);save();render()}
+function draw(fromWheel){let p=pool();if(!p.length){$('result').innerHTML='<p class="muted">Não há ideias nesta seleção. Cadastrem uma ou alterem os filtros.</p>';return}let x=p[Math.floor(Math.random()*p.length)];if(fromWheel){if(spinning)return;spinning=true;let w=$('wheel');rotation+=1440+Math.floor(Math.random()*360);w.style.transform=`rotate(${rotation}deg)`;setTimeout(()=>{showResult(x);spinning=false},4250)}else showResult(x)}
+window.draw=draw;window.acceptIdea=()=>{$('result').innerHTML='<div class="art" style="margin:auto">💞</div><h3>Combinado!</h3><p class="muted">Aproveitem o momento e cuidem um do outro.</p>'};window.skipIdea=()=>{$('result').innerHTML='<p class="muted">Tudo bem! O importante é os dois estarem à vontade. Podem sortear outra opção.</p>'};
+$('spinBtn').addEventListener('click',()=>draw(true));$('spinBtn').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();draw(true)}});$('drawBtn').addEventListener('click',()=>draw(false));
+$('ideaForm').addEventListener('submit',e=>{e.preventDefault();ideas.push({id:Date.now()+Math.random(),name:$('name').value.trim(),desc:$('desc').value.trim(),category:$('category').value,emoji:$('emoji').value,favorite:false});save();e.target.reset();render();alert('Ideia salva!')});
+$('newChallenge').addEventListener('click',()=>{$('challenge').innerHTML=`<div class="art">✨</div><h3>${esc(challenges[Math.floor(Math.random()*challenges.length)])}</h3>`});$('clearHistory').addEventListener('click',()=>{if(confirm('Apagar todo o histórico?')){history=[];save();render()}});
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.view').forEach(x=>x.classList.add('hidden'));b.classList.add('active');$(b.dataset.tab).classList.remove('hidden')}));render();
+if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script></body></html>
